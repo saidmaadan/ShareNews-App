@@ -1,13 +1,13 @@
 defaults: &defaults
-	twitter:
-		clientId: "l4lJEPoAUDZYgrLvOr5J1VNIS"
-		clientSecret: "YdcUM6POkXfl4UuQ9Cicn4FJNKTMZY8J1GZDIfTcaWgq9yHQ28"
+  twitter:
+    clientId: "l4lJEPoAUDZYgrLvOr5J1VNIS"
+    clientSecret: "YdcUM6POkXfl4UuQ9Cicn4FJNKTMZY8J1GZDIfTcaWgq9yHQ28"
 
 development:
-	<<: *defaults
+  <<: *defaults
 
 test:
-	<<: *defaults
+  <<: *defaults
 
 production:
-	<<: *defaults
+  <<: *defaults

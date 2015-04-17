@@ -1,6 +1,9 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
+config.omniauth :twitter, AppConfig.twitter['clientId'],
+                            AppConfig.twitter['clientSecret']
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
@@ -142,8 +145,7 @@ Devise.setup do |config|
   # Range for password length.
   config.password_length = 8..128
 
-  config.omniauth :twitter, AppConfig.twitter['clientId'],
-                            AppConfig.twitter['clientSecret']
+
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
